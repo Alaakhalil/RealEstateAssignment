@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RY3-AV-PyO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamSSm-Bold.otf">
+            <string>GothamSSm-Bold</string>
+        </array>
+        <array key="GothamSSm-Book.otf">
+            <string>GothamSSm-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Information View Controller-->
+        <scene sceneID="K3C-7Q-X6Z">
+            <objects>
+                <viewController id="EDL-aH-0Gk" customClass="InformationViewController" customModule="RealEstate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ise-Ov-cJj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-TV-Cuq">
+                                <rect key="frame" x="26" y="76" width="71.5" height="22"/>
+                                <fontDescription key="fontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="0.80453832189999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design and Development" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="57b-kL-Z1o">
+                                <rect key="frame" x="26" y="193.5" width="242.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e4I-qV-92c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="0.80453832189999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dtt_logo" translatesAutoresizingMaskIntoConstraints="NO" id="yLH-Iz-tsB">
+                                <rect key="frame" x="26" y="254" width="183" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gv5-TV-DqA"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-Ka-epk">
+                                <rect key="frame" x="235" y="260" width="99" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by DTT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QBZ-r2-mvj">
+                                        <rect key="frame" x="4" y="8" width="45" height="14"/>
+                                        <fontDescription key="fontDescription" name="GothamSSm-Book" family="Gotham SSm" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="0.80453832189999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocg-VI-lFt">
+                                        <rect key="frame" x="4" y="22" width="39" height="27"/>
+                                        <fontDescription key="fontDescription" name="GothamSSm-Book" family="Gotham SSm" pointSize="12"/>
+                                        <state key="normal" title="d-tt.nl">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="urlPressedButton:" destination="EDL-aH-0Gk" eventType="touchUpInside" id="XrH-Bo-YpP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QBZ-r2-mvj" firstAttribute="top" secondItem="ieV-Ka-epk" secondAttribute="top" constant="8" id="JB3-Xo-7dB"/>
+                                    <constraint firstItem="ocg-VI-lFt" firstAttribute="top" secondItem="QBZ-r2-mvj" secondAttribute="bottom" id="b4w-Lm-cbb"/>
+                                    <constraint firstItem="QBZ-r2-mvj" firstAttribute="leading" secondItem="ieV-Ka-epk" secondAttribute="leading" constant="4" id="ddD-Ax-lCl"/>
+                                    <constraint firstItem="ocg-VI-lFt" firstAttribute="leading" secondItem="ieV-Ka-epk" secondAttribute="leading" constant="4" id="sb1-ly-P5N"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffG-n6-ktX">
+                                <rect key="frame" x="26" y="124" width="362" height="43.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43.5" id="X8x-Lh-fZ5"/>
+                                </constraints>
+                                <string key="text">Real Estate  app connect supply and demand in the real estate market. We help buyers and sellers. where the people come to looking for a new home.</string>
+                                <fontDescription key="fontDescription" name="GothamSSm-Book" family="Gotham SSm" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="0.3966713449" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GUx-dO-C3V"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xyg-TV-Cuq" firstAttribute="top" secondItem="GUx-dO-C3V" secondAttribute="top" constant="32" id="4fM-ga-i1c"/>
+                            <constraint firstItem="yLH-Iz-tsB" firstAttribute="top" secondItem="57b-kL-Z1o" secondAttribute="bottom" constant="30.5" id="F0L-EN-Sdw"/>
+                            <constraint firstItem="ffG-n6-ktX" firstAttribute="top" secondItem="xyg-TV-Cuq" secondAttribute="bottom" constant="26" id="Fmc-Tg-V4I"/>
+                            <constraint firstItem="ffG-n6-ktX" firstAttribute="leading" secondItem="GUx-dO-C3V" secondAttribute="leading" constant="26" id="IjK-ca-XLy"/>
+                            <constraint firstItem="ieV-Ka-epk" firstAttribute="leading" secondItem="yLH-Iz-tsB" secondAttribute="trailing" constant="26" id="RAb-fE-0tY"/>
+                            <constraint firstItem="ieV-Ka-epk" firstAttribute="centerY" secondItem="yLH-Iz-tsB" secondAttribute="centerY" id="VaE-l8-ahY"/>
+                            <constraint firstItem="57b-kL-Z1o" firstAttribute="leading" secondItem="xyg-TV-Cuq" secondAttribute="leading" id="XyE-yZ-36j"/>
+                            <constraint firstItem="ieV-Ka-epk" firstAttribute="width" secondItem="Ise-Ov-cJj" secondAttribute="width" multiplier="0.23913" id="a9W-yr-8Ap"/>
+                            <constraint firstItem="yLH-Iz-tsB" firstAttribute="width" secondItem="Ise-Ov-cJj" secondAttribute="width" multiplier="0.442029" id="gtO-X2-0k1"/>
+                            <constraint firstItem="ieV-Ka-epk" firstAttribute="height" secondItem="yLH-Iz-tsB" secondAttribute="height" multiplier="0.803279" id="kue-sk-0vb"/>
+                            <constraint firstItem="57b-kL-Z1o" firstAttribute="top" secondItem="ffG-n6-ktX" secondAttribute="bottom" constant="26" id="lC4-r8-qS8"/>
+                            <constraint firstItem="yLH-Iz-tsB" firstAttribute="leading" secondItem="57b-kL-Z1o" secondAttribute="leading" id="me5-tk-IDE"/>
+                            <constraint firstItem="xyg-TV-Cuq" firstAttribute="leading" secondItem="GUx-dO-C3V" secondAttribute="leading" constant="26" id="os1-Mz-UIZ"/>
+                            <constraint firstItem="GUx-dO-C3V" firstAttribute="trailing" secondItem="ffG-n6-ktX" secondAttribute="trailing" constant="26" id="vz6-dq-WfA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="info-button-2" selectedImage="info-button" id="Pxg-ja-VPi"/>
+                    <navigationItem key="navigationItem" id="qox-aA-5ru"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSy-ti-t7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195.6521739130435" y="58.928571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L9m-XL-mhu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="RY3-AV-PyO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="94T-Mh-ccA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EDL-aH-0Gk" kind="relationship" relationship="rootViewController" id="9oT-fr-TEk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jZ-IB-h6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285.50724637681162" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dtt_logo" width="197" height="66"/>
+        <image name="info-button" width="25" height="25"/>
+        <image name="info-button-2" width="25" height="25"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
