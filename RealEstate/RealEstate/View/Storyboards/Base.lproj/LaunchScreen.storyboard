@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D7R-tM-xEk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="pw0-jZ-CBX">
+            <objects>
+                <viewController id="D7R-tM-xEk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3bD-6e-W8F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTT_Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="W22-My-PVv">
+                                <rect key="frame" x="145" y="386" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W22-My-PVv" secondAttribute="height" multiplier="1:1" id="v9i-PW-uMD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OFZ-4q-K7w"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.33333333329999998" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W22-My-PVv" firstAttribute="centerX" secondItem="3bD-6e-W8F" secondAttribute="centerX" id="QKx-zo-Ilr"/>
+                            <constraint firstItem="W22-My-PVv" firstAttribute="width" secondItem="3bD-6e-W8F" secondAttribute="width" multiplier="0.3" id="aLy-kV-G2D"/>
+                            <constraint firstItem="W22-My-PVv" firstAttribute="centerY" secondItem="3bD-6e-W8F" secondAttribute="centerY" id="rMy-qQ-cXw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcC-nH-Jeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DTT_Logo-1" width="282.5" height="287"/>
+    </resources>
+</document>
