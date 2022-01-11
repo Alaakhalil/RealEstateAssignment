@@ -8,6 +8,7 @@ target 'RealEstate' do
   # Pods for RealEstate
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'GoogleMaps'
   target 'RealEstateTests' do
     inherit! :search_paths
     # Pods for testing
