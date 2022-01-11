@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,9 +12,6 @@
         </array>
         <array key="GothamSSm-Book.otf">
             <string>GothamSSm-Book</string>
-        </array>
-        <array key="GothamSSm-Medium.otf">
-            <string>GothamSSm-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -37,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="prominent" text="" placeholder="  Search for a home" translatesAutoresizingMaskIntoConstraints="NO" id="DXY-jL-uH2">
-                                <rect key="frame" x="22" y="128" width="370" height="50"/>
+                                <rect key="frame" x="8" y="128" width="398" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PTY-vh-dtz"/>
@@ -56,7 +52,7 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ycd-MD-ZhQ">
                                 <rect key="frame" x="0.0" y="178" width="414" height="635"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseCell" rowHeight="141" id="Pwx-vG-xUD" customClass="HouseCell" customModule="RealEstate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="141"/>
@@ -73,7 +69,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="hWd-Ph-XZJ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="GothamSSm-Medium" family="Gotham SSm" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -138,21 +134,24 @@
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="2"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="777" contentMode="left" verticalHuggingPriority="251" text="57774.66 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Gpi-qn-3bJ">
-                                                            <rect key="frame" x="283" y="83" width="80.5" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="777" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.68000000000000005" translatesAutoresizingMaskIntoConstraints="NO" id="Gpi-qn-3bJ">
+                                                            <rect key="frame" x="283" y="82.5" width="97" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="GothamSSm-Book" family="Gotham SSm" pointSize="12"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="2"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-UL-2xX">
-                                                            <rect key="frame" x="16" y="16" width="90" height="85"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-UL-2xX">
+                                                            <rect key="frame" x="16" y="16" width="90" height="93"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="90" id="aRd-uq-nfS"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                     <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
@@ -189,8 +188,10 @@
                                                         <constraint firstItem="ZE8-Td-vno" firstAttribute="firstBaseline" secondItem="w1h-yf-XFF" secondAttribute="firstBaseline" id="WcL-06-E4S"/>
                                                         <constraint firstItem="Gpi-qn-3bJ" firstAttribute="leading" secondItem="yAK-YZ-kcx" secondAttribute="trailing" constant="6" id="XD8-lO-PmY"/>
                                                         <constraint firstItem="VYX-ik-zz2" firstAttribute="baseline" secondItem="ZE8-Td-vno" secondAttribute="baseline" id="YF6-zS-1dv"/>
-                                                        <constraint firstItem="nuf-UL-2xX" firstAttribute="centerY" secondItem="XGC-cl-CSW" secondAttribute="centerY" id="ZHc-Sd-C0b"/>
+                                                        <constraint firstItem="nuf-UL-2xX" firstAttribute="top" secondItem="3DH-5Q-Quu" secondAttribute="top" id="YnR-Sk-y1m"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nuf-UL-2xX" secondAttribute="bottomMargin" constant="16" id="ZKB-gG-rRH"/>
                                                         <constraint firstItem="VYX-ik-zz2" firstAttribute="top" secondItem="Q1l-4p-8Vw" secondAttribute="top" id="aNg-Xq-5UZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Gpi-qn-3bJ" secondAttribute="trailing" constant="2" id="aTb-eM-nlq"/>
                                                         <constraint firstItem="3DH-5Q-Quu" firstAttribute="leading" secondItem="Xcy-gX-pat" secondAttribute="leading" id="cAI-jy-Wd9"/>
                                                         <constraint firstAttribute="trailing" secondItem="3DH-5Q-Quu" secondAttribute="trailing" constant="16" id="eF1-ZO-zdO"/>
                                                         <constraint firstItem="w1h-yf-XFF" firstAttribute="leading" secondItem="z20-X9-Hif" secondAttribute="trailing" constant="5" id="hXO-uB-bVD"/>
@@ -198,7 +199,6 @@
                                                         <constraint firstItem="ZE8-Td-vno" firstAttribute="leading" secondItem="Q1l-4p-8Vw" secondAttribute="trailing" constant="6" id="nxp-36-bto"/>
                                                         <constraint firstItem="3DH-5Q-Quu" firstAttribute="top" secondItem="XGC-cl-CSW" secondAttribute="top" constant="16" id="oyT-NU-Qlx"/>
                                                         <constraint firstItem="w1h-yf-XFF" firstAttribute="firstBaseline" secondItem="Gpi-qn-3bJ" secondAttribute="firstBaseline" id="pZf-Hg-Ww6"/>
-                                                        <constraint firstItem="nuf-UL-2xX" firstAttribute="top" secondItem="XGC-cl-CSW" secondAttribute="top" constant="16" id="xxd-kd-qgo"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -226,6 +226,15 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="Xcy-gX-pat" id="PsA-dV-l7N"/>
+                                            <outlet property="bathroomsLabel" destination="ZE8-Td-vno" id="3hA-iv-r7I"/>
+                                            <outlet property="bedroomsLabel" destination="VYX-ik-zz2" id="ZTm-FU-zOe"/>
+                                            <outlet property="distanceLabel" destination="Gpi-qn-3bJ" id="VOM-Xk-kJZ"/>
+                                            <outlet property="houseImage" destination="nuf-UL-2xX" id="5c4-j2-43Y"/>
+                                            <outlet property="priceLabel" destination="3DH-5Q-Quu" id="gmj-Nd-Ym4"/>
+                                            <outlet property="sizeLabel" destination="w1h-yf-XFF" id="nZK-hi-vrY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -239,11 +248,11 @@
                         <constraints>
                             <constraint firstItem="Ycd-MD-ZhQ" firstAttribute="leading" secondItem="QGH-oG-DCf" secondAttribute="leading" id="2ly-K8-1wC"/>
                             <constraint firstItem="DXY-jL-uH2" firstAttribute="centerX" secondItem="vzd-JL-0sZ" secondAttribute="centerX" id="2sD-RN-dQh"/>
-                            <constraint firstItem="DXY-jL-uH2" firstAttribute="leading" secondItem="QGH-oG-DCf" secondAttribute="leading" constant="22" id="Mzs-6q-whi"/>
+                            <constraint firstItem="DXY-jL-uH2" firstAttribute="leading" secondItem="QGH-oG-DCf" secondAttribute="leading" constant="8" id="Mzs-6q-whi"/>
                             <constraint firstItem="QGH-oG-DCf" firstAttribute="trailing" secondItem="Ycd-MD-ZhQ" secondAttribute="trailing" id="O2s-on-v8l"/>
                             <constraint firstItem="DXY-jL-uH2" firstAttribute="top" secondItem="J6t-ti-Zf3" secondAttribute="bottom" constant="22" id="TmL-y6-JkP"/>
                             <constraint firstItem="Ycd-MD-ZhQ" firstAttribute="top" secondItem="DXY-jL-uH2" secondAttribute="bottom" id="Vg2-lp-Gfl"/>
-                            <constraint firstItem="QGH-oG-DCf" firstAttribute="trailing" secondItem="DXY-jL-uH2" secondAttribute="trailing" constant="22" id="WNy-kJ-DTJ"/>
+                            <constraint firstItem="QGH-oG-DCf" firstAttribute="trailing" secondItem="DXY-jL-uH2" secondAttribute="trailing" constant="8" id="WNy-kJ-DTJ"/>
                             <constraint firstItem="QGH-oG-DCf" firstAttribute="bottom" secondItem="Ycd-MD-ZhQ" secondAttribute="bottom" id="eXB-GU-g73"/>
                             <constraint firstItem="J6t-ti-Zf3" firstAttribute="leading" secondItem="QGH-oG-DCf" secondAttribute="leading" constant="32" id="lOI-ck-qEn"/>
                             <constraint firstItem="J6t-ti-Zf3" firstAttribute="top" secondItem="QGH-oG-DCf" secondAttribute="top" constant="32" id="oTf-oP-2tc"/>
@@ -252,6 +261,7 @@
                     <navigationItem key="navigationItem" id="UwO-os-bZG"/>
                     <connections>
                         <outlet property="housesTableView" destination="Ycd-MD-ZhQ" id="NXH-QZ-U6n"/>
+                        <outlet property="searchBar" destination="DXY-jL-uH2" id="y1g-Qx-CNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oS4-GR-PL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -288,8 +298,5 @@
         <image name="pin" width="10" height="12"/>
         <image name="shower" width="10" height="13"/>
         <image name="square-measument" width="12" height="13"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
