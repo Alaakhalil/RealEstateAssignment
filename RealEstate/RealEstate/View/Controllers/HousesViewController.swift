@@ -10,7 +10,7 @@ import CoreLocation
 
 
 
-class HousesViewController: UIViewController {
+class HousesViewController: UIViewController, CLLocationManagerDelegate{
    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var housesTableView: UITableView!
@@ -18,21 +18,31 @@ class HousesViewController: UIViewController {
     var noDataView = UIView()
     var distances = [String:String]()
     var userCoordinate:CLLocation?
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.handleNoResults()
-        self.noDataView.isHidden = true
-        self.adjustmentSearchBar()
-        // Setting up refresh UI with proper action to reloadData
-        self.getData()
+        handleNoResults()
+        noDataView.isHidden = true
+        adjustmentSearchBar()
+        getData()
+        enableLocation()
     }
     
+    func enableLocation(){
+        if (CLLocationManager.locationServicesEnabled()){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getData()
     }
 
+    
     // Handling the Houses and reloaded in the tableView
     func getData(){
         HousesViewModel.instance.fetchHouses { status in
@@ -71,15 +81,6 @@ class HousesViewController: UIViewController {
         self.view.addSubview(noDataView)
         self.noDataView.isHidden = true
     }
-    // Handle Refresh Action
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        // Do some reloading of data and update the table view's data source
-        print("8888888888888")
-        getData()
-        self.housesTableView.reloadData()
-        refreshControl.endRefreshing()
-    }
-
 }
 
 // MARK: - UITableView
