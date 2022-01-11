@@ -123,9 +123,12 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80136986300000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-E5-Prf">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-E5-Prf" customClass="GMSMapView">
                                                         <rect key="frame" x="26" y="283.5" width="362" height="222"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="cdr-2l-m9C"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

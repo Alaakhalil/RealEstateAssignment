@@ -11,7 +11,7 @@ import GoogleMaps
 class HouseDetailsViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
   
-    @IBOutlet weak var map: UIView!
+    @IBOutlet weak var map: GMSMapView!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var bathroomsLabel: UILabel!
@@ -27,28 +27,26 @@ class HouseDetailsViewController: UIViewController, GMSMapViewDelegate, CLLocati
     var markerPosition : CGPoint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setData()
-        self.setMapView()
+        setData()
+        setMapView()
     }
     
     func setMapView(){
-        let camera = GMSCameraPosition.camera(withLatitude:  Double((self.houseDetail?.latitude)!), longitude: Double((self.houseDetail?.longitude)!), zoom: 6.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        map = mapView
-        let marker = GMSMarker()
-        let position = CLLocationCoordinate2D(latitude: Double((self.houseDetail?.latitude)!), longitude: Double((self.houseDetail?.longitude)!))
-        marker.position = position
-        marker.title = "\(self.houseDetail?.zip ?? " ")\(self.houseDetail?.city ?? " ")"
-        marker.map = mapView
-        //mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-      map.addSubview(mapView)
-//        mapView.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        map.addSubview(mapView)
+        mapView.delegate = self
+
+        
     }
     
     // Setting the house`s data in the view
     func setData(){
     
-       // self.handlingMapView()
+        self.handlingMapView()
         self.sizeLabel.text = "\(houseDetail?.size ?? 0)"
         self.bathroomsLabel.text = "\(houseDetail?.bathrooms ?? 0)"
         self.bedroomsLabel.text = "\(houseDetail?.bedrooms ?? 0)"
@@ -69,20 +67,15 @@ class HouseDetailsViewController: UIViewController, GMSMapViewDelegate, CLLocati
         }
         
     }
+    
     // Show the house location and add marker for it
     func handlingMapView() {
-       // DispatchQueue.main.async { [self] in
-                
-//            self.mapView.camera = GMSCameraPosition(target: position, zoom: 15, bearing: 0, viewingAngle: 0)
-//        camera = GMSCameraPosition.camera(withLatitude: Double((self.houseDetail?.latitude)!), longitude: Double((self.houseDetail?.longitude)!), zoom: 17.0)
-//        mapView.camera = camera
-//        mapView.animate(to: camera)
-//        let marker = GMSMarker()
-//        marker.position = position
-//        marker.appearAnimation = .pop
-//        marker.title = "\(self.houseDetail?.zip ?? " ")\(self.houseDetail?.city ?? " ")"
-//        marker.map = self.mapView
-     //   }
+        let camera = GMSCameraPosition.camera(withLatitude: Double((houseDetail?.latitude)!), longitude: Double((houseDetail?.longitude)!), zoom: 15.0)
+        mapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+        let position = CLLocationCoordinate2D(latitude: Double((houseDetail?.latitude)!), longitude: Double((houseDetail?.longitude)!))
+        let marker = GMSMarker(position: position)
+        marker.title = "\(houseDetail?.zip ?? " ")\(houseDetail?.city ?? " ")"
+        marker.map = self.mapView
     }
     
     // back to HousesViewController
