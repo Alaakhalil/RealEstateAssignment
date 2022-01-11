@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LFs-bI-Fh1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hj1-I1-4SG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamSSm-Bold.otf">
+            <string>GothamSSm-Bold</string>
+        </array>
+        <array key="GothamSSm-Medium.otf">
+            <string>GothamSSm-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="MYE-Ek-X9p">
@@ -28,10 +37,78 @@
             </objects>
             <point key="canvasLocation" x="-608" y="124"/>
         </scene>
+        <!--Access Location View Controller-->
+        <scene sceneID="G0E-ka-bfs">
+            <objects>
+                <viewController id="Hj1-I1-4SG" customClass="AccessLocationViewController" customModule="RealEstate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ujh-Ha-5D3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgbin-green-map-red-location-mark-d7dNEcvYXpHN69GR3rWdyz8h1" translatesAutoresizingMaskIntoConstraints="NO" id="pVz-60-GZJ">
+                                <rect key="frame" x="62" y="144" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pVz-60-GZJ" secondAttribute="height" multiplier="1:1" id="Rfb-RM-sWf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow your location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46P-M6-REC">
+                                <rect key="frame" x="113" y="450" width="188" height="22"/>
+                                <fontDescription key="fontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will need your location to give you better results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-6U-X5L">
+                                <rect key="frame" x="40.5" y="488" width="333.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="GothamSSm-Medium" family="Gotham SSm" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hZ-F3-qN2">
+                                <rect key="frame" x="62" y="552.5" width="290" height="50"/>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.33725490196078434" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NTR-UZ-9WU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="12"/>
+                                    <color key="baseForegroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="LFs-bI-Fh1" kind="show" id="eS5-Hz-Jdg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1cN-mR-piC"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pVz-60-GZJ" firstAttribute="width" secondItem="Ujh-Ha-5D3" secondAttribute="width" multiplier="0.7" id="Bqo-8p-NuL"/>
+                            <constraint firstItem="46P-M6-REC" firstAttribute="top" secondItem="pVz-60-GZJ" secondAttribute="bottom" constant="16" id="Keh-Eq-RmU"/>
+                            <constraint firstItem="46P-M6-REC" firstAttribute="centerX" secondItem="Ujh-Ha-5D3" secondAttribute="centerX" id="KmE-V1-By4"/>
+                            <constraint firstItem="pVz-60-GZJ" firstAttribute="centerX" secondItem="Ujh-Ha-5D3" secondAttribute="centerX" id="MAe-aM-8Ns"/>
+                            <constraint firstItem="ynF-6U-X5L" firstAttribute="top" secondItem="46P-M6-REC" secondAttribute="bottom" constant="16" id="NsF-P3-WvC"/>
+                            <constraint firstItem="6hZ-F3-qN2" firstAttribute="width" secondItem="pVz-60-GZJ" secondAttribute="width" id="Swl-7n-jW3"/>
+                            <constraint firstItem="pVz-60-GZJ" firstAttribute="top" secondItem="1cN-mR-piC" secondAttribute="top" constant="100" id="bu4-wT-VNb"/>
+                            <constraint firstItem="6hZ-F3-qN2" firstAttribute="centerX" secondItem="Ujh-Ha-5D3" secondAttribute="centerX" id="jI6-aA-lp7"/>
+                            <constraint firstItem="ynF-6U-X5L" firstAttribute="centerX" secondItem="Ujh-Ha-5D3" secondAttribute="centerX" id="ta0-dW-aDY"/>
+                            <constraint firstItem="6hZ-F3-qN2" firstAttribute="top" secondItem="ynF-6U-X5L" secondAttribute="bottom" constant="50" id="wS1-uJ-4sV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIk-Ke-fkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1946" y="-315"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0DV-e1-pG8">
             <objects>
-                <tabBarController id="LFs-bI-Fh1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ID" modalPresentationStyle="fullScreen" id="LFs-bI-Fh1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Np1-BR-rhI"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="vvB-4Z-RsG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="imgbin-green-map-red-location-mark-d7dNEcvYXpHN69GR3rWdyz8h1" width="576" height="573"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

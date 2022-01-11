@@ -19,7 +19,6 @@
         <!--House Details View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HouseDetailController" id="Y6W-OH-hqX" customClass="HouseDetailsViewController" customModule="RealEstate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mT0-2u-PBL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -38,8 +37,11 @@
                                     <constraint firstAttribute="width" constant="50" id="9eA-WM-XfN"/>
                                 </constraints>
                                 <state key="normal" image="left-arrow-2"/>
+                                <connections>
+                                    <action selector="dismissPressedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KYZ-w8-Tuo"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" restorationIdentifier="HouseDetailController" translatesAutoresizingMaskIntoConstraints="NO" id="zgP-gw-EWm" customClass="RoundUIView" customModule="HotHouses" customModuleProvider="target">
+                            <view contentMode="scaleToFill" restorationIdentifier="HouseDetailController" translatesAutoresizingMaskIntoConstraints="NO" id="zgP-gw-EWm" customClass="RoundUIView" customModule="RealEstate" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="214.5" width="414" height="647.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="djs-DA-79p">
@@ -115,39 +117,37 @@
                                                         <fontDescription key="fontDescription" name="GothamSSm-Book" family="Gotham SSm" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nOM-rk-3AJ">
-                                                        <rect key="frame" x="26" y="273.5" width="362" height="224"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="224" id="HNx-Qf-ttX"/>
-                                                        </constraints>
-                                                    </mapView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwf-85-uoN">
                                                         <rect key="frame" x="26" y="238" width="75" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="16"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80136986300000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-E5-Prf">
+                                                        <rect key="frame" x="26" y="283.5" width="362" height="222"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="Oii-eN-IER" firstAttribute="leading" secondItem="dEc-E5-Prf" secondAttribute="leading" id="3WZ-NV-b4y"/>
                                                     <constraint firstItem="Oii-eN-IER" firstAttribute="top" secondItem="dNq-Fo-oBl" secondAttribute="bottom" constant="1" id="4wS-ik-slF"/>
                                                     <constraint firstItem="Pwf-85-uoN" firstAttribute="top" secondItem="Oii-eN-IER" secondAttribute="bottom" constant="32" id="Heq-mw-gi2"/>
-                                                    <constraint firstItem="Oii-eN-IER" firstAttribute="leading" secondItem="nOM-rk-3AJ" secondAttribute="leading" id="HgM-AP-Xuc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dEc-E5-Prf" secondAttribute="trailing" constant="26" id="Hfn-nr-kBP"/>
                                                     <constraint firstItem="dNq-Fo-oBl" firstAttribute="top" secondItem="2k6-yd-e2G" secondAttribute="top" id="I6c-P6-5b7"/>
-                                                    <constraint firstItem="Oii-eN-IER" firstAttribute="trailing" secondItem="nOM-rk-3AJ" secondAttribute="trailing" id="MdL-Av-X3M"/>
-                                                    <constraint firstAttribute="bottomMargin" secondItem="nOM-rk-3AJ" secondAttribute="bottom" constant="26" id="NZc-6k-oCs"/>
+                                                    <constraint firstItem="dEc-E5-Prf" firstAttribute="trailing" secondItem="Oii-eN-IER" secondAttribute="trailing" id="IpR-lV-15p"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dEc-E5-Prf" secondAttribute="bottom" constant="26" id="K5w-Cr-zgI"/>
+                                                    <constraint firstItem="Oii-eN-IER" firstAttribute="leading" secondItem="2k6-yd-e2G" secondAttribute="leading" constant="26" id="Kzh-xZ-0Wf"/>
+                                                    <constraint firstItem="dEc-E5-Prf" firstAttribute="height" secondItem="2k6-yd-e2G" secondAttribute="height" multiplier="0.417686" id="Mze-yX-Znf"/>
+                                                    <constraint firstItem="dEc-E5-Prf" firstAttribute="top" secondItem="Pwf-85-uoN" secondAttribute="bottom" constant="26" id="Pxw-UC-y7e"/>
                                                     <constraint firstItem="Pwf-85-uoN" firstAttribute="top" secondItem="2k6-yd-e2G" secondAttribute="top" constant="238" id="Qhi-DN-Luy"/>
-                                                    <constraint firstItem="Pwf-85-uoN" firstAttribute="leading" secondItem="nOM-rk-3AJ" secondAttribute="leading" id="VHz-EY-GBT"/>
-                                                    <constraint firstItem="nOM-rk-3AJ" firstAttribute="top" secondItem="Pwf-85-uoN" secondAttribute="bottom" constant="16" id="VyK-od-aJ2"/>
-                                                    <constraint firstAttribute="trailing" secondItem="nOM-rk-3AJ" secondAttribute="trailing" constant="26" id="aTS-G9-41C"/>
                                                     <constraint firstItem="dNq-Fo-oBl" firstAttribute="leading" secondItem="Oii-eN-IER" secondAttribute="leading" id="cm2-Lb-fv5"/>
-                                                    <constraint firstItem="nOM-rk-3AJ" firstAttribute="leading" secondItem="2k6-yd-e2G" secondAttribute="leading" constant="26" id="lLx-QY-txm"/>
                                                     <constraint firstItem="Oii-eN-IER" firstAttribute="leading" secondItem="Pwf-85-uoN" secondAttribute="leading" id="owp-4s-JHh"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="2k6-yd-e2G" firstAttribute="trailing" secondItem="Uvw-Sn-luI" secondAttribute="trailing" id="06j-P2-7mM"/>
+                                            <constraint firstItem="Uvw-Sn-luI" firstAttribute="trailing" secondItem="2k6-yd-e2G" secondAttribute="trailing" id="06j-P2-7mM"/>
                                             <constraint firstItem="2k6-yd-e2G" firstAttribute="width" secondItem="thc-O8-izP" secondAttribute="width" id="47V-Ay-0UG"/>
                                             <constraint firstItem="2k6-yd-e2G" firstAttribute="leading" secondItem="Uvw-Sn-luI" secondAttribute="leading" id="EDH-S6-kHN"/>
                                             <constraint firstItem="2k6-yd-e2G" firstAttribute="leading" secondItem="UjO-YJ-h0q" secondAttribute="leading" id="Iy9-oB-FSw"/>
@@ -205,7 +205,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gsG-g4-dt7"/>
+                    <connections>
+                        <outlet property="bathroomsLabel" destination="0S9-Gr-yOD" id="tdu-rh-qsF"/>
+                        <outlet property="bedroomsLabel" destination="X1w-o1-Ego" id="mcT-0t-KJN"/>
+                        <outlet property="descreptionTextView" destination="Oii-eN-IER" id="3HK-rq-TfC"/>
+                        <outlet property="distanceLabel" destination="Sjs-ED-M7j" id="7mN-e5-uwP"/>
+                        <outlet property="houseImage" destination="MEa-H6-eEG" id="oMu-6n-kYY"/>
+                        <outlet property="map" destination="dEc-E5-Prf" id="B20-0t-NVS"/>
+                        <outlet property="priceLabel" destination="Yv4-De-eMB" id="13l-rF-RIC"/>
+                        <outlet property="sizeLabel" destination="0Nf-2t-spl" id="mSh-nW-Fyx"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="64.955357142857139"/>
         </scene>
