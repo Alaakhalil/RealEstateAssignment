@@ -133,11 +133,15 @@ extension HousesViewController: UISearchBarDelegate {
             searching = false
         }
         else{
+            if HousesViewModel.instance.searchedHouses.isEmpty{
+                searching = false
+                noDataView.isHidden = false
+            }
+            noDataView.isHidden = true
             searching = true
         }
         self.getData()
     }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""
