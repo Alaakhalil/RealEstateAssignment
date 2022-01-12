@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hj1-I1-4SG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LFs-bI-Fh1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -11,8 +11,8 @@
         <array key="GothamSSm-Bold.otf">
             <string>GothamSSm-Bold</string>
         </array>
-        <array key="GothamSSm-Medium.otf">
-            <string>GothamSSm-Medium</string>
+        <array key="GothamSSm-Light.otf">
+            <string>GothamSSm-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -40,7 +40,7 @@
         <!--Access Location View Controller-->
         <scene sceneID="G0E-ka-bfs">
             <objects>
-                <viewController id="Hj1-I1-4SG" customClass="AccessLocationViewController" customModule="RealEstate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccessLocation" id="Hj1-I1-4SG" customClass="AccessLocationViewController" customModule="RealEstate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ujh-Ha-5D3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,13 +54,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow your location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46P-M6-REC">
                                 <rect key="frame" x="113" y="450" width="188" height="22"/>
                                 <fontDescription key="fontDescription" name="GothamSSm-Bold" family="Gotham SSm" pointSize="18"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="0.80453832189999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will need your location to give you better results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-6U-X5L">
-                                <rect key="frame" x="40.5" y="488" width="333.5" height="14.5"/>
-                                <fontDescription key="fontDescription" name="GothamSSm-Medium" family="Gotham SSm" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="43" y="488" width="328" height="14.5"/>
+                                <fontDescription key="fontDescription" name="GothamSSm-Light" family="Gotham SSm" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="0.80453832189999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hZ-F3-qN2">

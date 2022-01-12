@@ -80,7 +80,7 @@
                                 </constraints>
                                 <string key="text">Real Estate  app connect supply and demand in the real estate market. We help buyers and sellers. where the people come to looking for a new home.</string>
                                 <fontDescription key="fontDescription" name="GothamSSm-Book" family="Gotham SSm" pointSize="12"/>
-                                <color key="textColor" white="0.0" alpha="0.3966713449" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
