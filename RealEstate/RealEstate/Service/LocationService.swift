@@ -62,10 +62,8 @@ extension LocationService: CLLocationManagerDelegate {
         switch status {
         case .notDetermined, .restricted, .denied:
             didChangeStatus?(false)
-            print("false")
         default:
             didChangeStatus?(true)
-            print("true")
         }
     }
 }

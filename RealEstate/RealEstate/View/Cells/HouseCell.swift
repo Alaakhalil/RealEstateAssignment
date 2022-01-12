@@ -37,8 +37,7 @@ class HouseCell: UITableViewCell {
         formatter.currencySymbol = "$"
         formatter.maximumFractionDigits = 0;
         self.priceLabel.text = formatter.string(from: (house.price ?? 0) as NSNumber)
-        print(formatter.string(from: (house.price ?? 0) as NSNumber)!)
-        
+
         //setting the image of house
         if let value = house.image {
             if let url = URL(string: (baseUrl + value)) {
@@ -56,7 +55,8 @@ class HouseCell: UITableViewCell {
             distanceLabel.text = String(format:"%.2f km",distance)
             return String(String(format:"%.2f km",distance))
         }
-        return " "
+        distanceLabel.text = "-"
+        return "-"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
