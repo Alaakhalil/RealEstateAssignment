@@ -42,7 +42,6 @@ class HousesViewController: UIViewController, CLLocationManagerDelegate{
         getData()
     }
 
-    
     // Handling the Houses and reloaded in the tableView
     func getData(){
         HousesViewModel.instance.fetchHouses { status in
@@ -98,21 +97,15 @@ extension HousesViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = housesTableView.dequeueReusableCell(withIdentifier: "HouseCell") as! HouseCell
-        var houseObject = HousesViewModel.instance.sortedHouses[indexPath.row]
-        if searching{
-            houseObject = HousesViewModel.instance.searchedHouses[indexPath.row]
-        }
+        let cell = housesTableView.dequeueReusableCell(withIdentifier: StoryBoardConstants.CellsId.HouseCell.rawValue) as! HouseCell
+        let houseObject = getHouses(_searching: searching, _houseIndex: indexPath)
         self.distances["\(houseObject.id ?? 0)"] = cell.setData(house: houseObject)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "HouseDetails", bundle: nil).instantiateViewController(withIdentifier: "HouseDetailController") as! HouseDetailsViewController
-        var selectedHouse = HousesViewModel.instance.sortedHouses[indexPath.row]
-        if searching{
-            selectedHouse = HousesViewModel.instance.searchedHouses[indexPath.row]
-        }
+        let vc = UIStoryboard(name: StoryBoardConstants.storyBoard.HouseDetails.rawValue, bundle: nil).instantiateViewController(withIdentifier: StoryBoardConstants.ViewControllersId.HouseDetailController.rawValue) as! HouseDetailsViewController
+        let selectedHouse = getHouses(_searching: searching, _houseIndex: indexPath)
         let selectedId = selectedHouse.id ?? 0
         vc.distance = distances["\(selectedId)"]
         self.searchBar.searchTextField.endEditing(true)
@@ -120,6 +113,14 @@ extension HousesViewController: UITableViewDataSource, UITableViewDelegate{
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    // check if the searching is enable and return the Houses
+    func getHouses(_searching: Bool, _houseIndex: IndexPath)-> Houses{
+        if searching{
+            return HousesViewModel.instance.searchedHouses[_houseIndex.row]
+        }
+        return HousesViewModel.instance.sortedHouses[_houseIndex.row]
 
     }
 }
