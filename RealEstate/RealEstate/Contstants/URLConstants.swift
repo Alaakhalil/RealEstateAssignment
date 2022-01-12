@@ -10,6 +10,7 @@ import Alamofire
 
 let baseUrl = "https://intern.docker-dev.d-tt.nl/"
 let houseUrl = baseUrl + "api/house/"
+let dttUrl = "https://www.d-tt.nl/"
 let headers: HTTPHeaders = [
     "Access-Key": "98bww4ezuzfePCYFxJEWyszbUXc7dxRx"
 ]
