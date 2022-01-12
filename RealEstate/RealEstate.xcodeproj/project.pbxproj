@@ -12,8 +12,8 @@
 		6110D7DE2789E5B300FBCA78 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7DD2789E5B300FBCA78 /* URLConstants.swift */; };
 		6110D7E22789E6E200FBCA78 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7E12789E6E200FBCA78 /* Status.swift */; };
 		6110D7E62789F03300FBCA78 /* HousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7E52789F03300FBCA78 /* HousesViewModel.swift */; };
-		6110D7E82789FA0E00FBCA78 /* UIImageViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7E72789FA0E00FBCA78 /* UIImageViewExtention.swift */; };
-		6110D7EA278A062C00FBCA78 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7E9278A062C00FBCA78 /* UIViewExtention.swift */; };
+		6110D7E82789FA0E00FBCA78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7E72789FA0E00FBCA78 /* UIImageViewExtension.swift */; };
+		6110D7EA278A062C00FBCA78 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110D7E9278A062C00FBCA78 /* UIViewExtension.swift */; };
 		6110D804278A34D000FBCA78 /* GothamSSm-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6110D802278A34BE00FBCA78 /* GothamSSm-Black.otf */; };
 		6110D805278A34D000FBCA78 /* GothamSSm-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6110D7F8278A34BC00FBCA78 /* GothamSSm-BlackItalic.otf */; };
 		6110D806278A34D000FBCA78 /* GothamSSm-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6110D801278A34BE00FBCA78 /* GothamSSm-Bold.otf */; };
@@ -42,6 +42,8 @@
 		61205FE627876E71003F3B32 /* HouseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61205FE527876E71003F3B32 /* HouseDetailsViewController.swift */; };
 		61205FE827878E2E003F3B32 /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61205FE727878E2E003F3B32 /* HouseCell.swift */; };
 		616AF89B278DA6F00062D366 /* AccessLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF89A278DA6F00062D366 /* AccessLocationViewController.swift */; };
+		61AD91FB278E31D900E8345D /* StoryBoardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD91FA278E31D800E8345D /* StoryBoardConstants.swift */; };
+		61BC426D278EFDBF00AFEADC /* SceneDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC426C278EFDBF00AFEADC /* SceneDelegateExtension.swift */; };
 		61D28B65278B76B1006DA41C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D28B64278B76B1006DA41C /* LocationService.swift */; };
 		6909E95D48FA07783560462C /* Pods_RealEstate_RealEstateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F9489E4DAB55B2B4E5AB82 /* Pods_RealEstate_RealEstateUITests.framework */; };
 		73EA4B379F4F336EA4C86D96 /* Pods_RealEstateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A89B4B48C2397FC458A4A0F /* Pods_RealEstateTests.framework */; };
@@ -74,8 +76,8 @@
 		6110D7DD2789E5B300FBCA78 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		6110D7E12789E6E200FBCA78 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		6110D7E52789F03300FBCA78 /* HousesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewModel.swift; sourceTree = "<group>"; };
-		6110D7E72789FA0E00FBCA78 /* UIImageViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtention.swift; sourceTree = "<group>"; };
-		6110D7E9278A062C00FBCA78 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		6110D7E72789FA0E00FBCA78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		6110D7E9278A062C00FBCA78 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6110D7F8278A34BC00FBCA78 /* GothamSSm-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamSSm-BlackItalic.otf"; sourceTree = "<group>"; };
 		6110D7F9278A34BC00FBCA78 /* GothamSSm-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamSSm-Light.otf"; sourceTree = "<group>"; };
 		6110D7FA278A34BC00FBCA78 /* GothamSSm-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamSSm-LightItalic.otf"; sourceTree = "<group>"; };
@@ -108,6 +110,8 @@
 		61205FE527876E71003F3B32 /* HouseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewController.swift; sourceTree = "<group>"; };
 		61205FE727878E2E003F3B32 /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
 		616AF89A278DA6F00062D366 /* AccessLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLocationViewController.swift; sourceTree = "<group>"; };
+		61AD91FA278E31D800E8345D /* StoryBoardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardConstants.swift; sourceTree = "<group>"; };
+		61BC426C278EFDBF00AFEADC /* SceneDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateExtension.swift; sourceTree = "<group>"; };
 		61D28B64278B76B1006DA41C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		7D411B7629EBE57221CC2875 /* Pods-RealEstate-RealEstateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstate-RealEstateUITests.debug.xcconfig"; path = "Target Support Files/Pods-RealEstate-RealEstateUITests/Pods-RealEstate-RealEstateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A89B4B48C2397FC458A4A0F /* Pods_RealEstateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealEstateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,13 +172,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6110D7F6278A346F00FBCA78 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		6110D7F7278A349700FBCA78 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,12 +216,12 @@
 		61205F9C278725FD003F3B32 /* RealEstate */ = {
 			isa = PBXGroup;
 			children = (
-				6110D7F6278A346F00FBCA78 /* New Group */,
 				61205FD227875A7A003F3B32 /* Contstants */,
 				61205FD127875A32003F3B32 /* Service */,
 				61205FD527875BAA003F3B32 /* View */,
 				61205FCE278759F2003F3B32 /* Models */,
 				61205FD027875A25003F3B32 /* ViewModels */,
+				61205FE227876DDF003F3B32 /* Helpers */,
 				61205F9D278725FD003F3B32 /* AppDelegate.swift */,
 				61205F9F278725FD003F3B32 /* SceneDelegate.swift */,
 				61205FA627872601003F3B32 /* Assets.xcassets */,
@@ -291,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				6110D7DD2789E5B300FBCA78 /* URLConstants.swift */,
+				61AD91FA278E31D800E8345D /* StoryBoardConstants.swift */,
 			);
 			path = Contstants;
 			sourceTree = "<group>";
@@ -320,7 +318,6 @@
 			children = (
 				6110D7F7278A349700FBCA78 /* Fonts */,
 				61205FCF27875A15003F3B32 /* Controllers */,
-				61205FE227876DDF003F3B32 /* Helpers */,
 				61205FD427875B23003F3B32 /* Cells */,
 				61205FD327875AC3003F3B32 /* Storyboards */,
 			);
@@ -330,10 +327,19 @@
 		61205FE227876DDF003F3B32 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				6110D7E72789FA0E00FBCA78 /* UIImageViewExtention.swift */,
-				6110D7E9278A062C00FBCA78 /* UIViewExtention.swift */,
+				61BC426E278F009D00AFEADC /* Extensions */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		61BC426E278F009D00AFEADC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6110D7E9278A062C00FBCA78 /* UIViewExtension.swift */,
+				61BC426C278EFDBF00AFEADC /* SceneDelegateExtension.swift */,
+				6110D7E72789FA0E00FBCA78 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,13 +635,15 @@
 				61205FDD27876B27003F3B32 /* HousesViewController.swift in Sources */,
 				6110D7DE2789E5B300FBCA78 /* URLConstants.swift in Sources */,
 				61205F9E278725FD003F3B32 /* AppDelegate.swift in Sources */,
+				61AD91FB278E31D900E8345D /* StoryBoardConstants.swift in Sources */,
 				616AF89B278DA6F00062D366 /* AccessLocationViewController.swift in Sources */,
 				6110D7D82789D62300FBCA78 /* ServerManger.swift in Sources */,
 				61205FE827878E2E003F3B32 /* HouseCell.swift in Sources */,
+				61BC426D278EFDBF00AFEADC /* SceneDelegateExtension.swift in Sources */,
 				61205FE627876E71003F3B32 /* HouseDetailsViewController.swift in Sources */,
-				6110D7EA278A062C00FBCA78 /* UIViewExtention.swift in Sources */,
+				6110D7EA278A062C00FBCA78 /* UIViewExtension.swift in Sources */,
 				61D28B65278B76B1006DA41C /* LocationService.swift in Sources */,
-				6110D7E82789FA0E00FBCA78 /* UIImageViewExtention.swift in Sources */,
+				6110D7E82789FA0E00FBCA78 /* UIImageViewExtension.swift in Sources */,
 				61205FDF27876CF6003F3B32 /* AboutViewController.swift in Sources */,
 				6110D7E62789F03300FBCA78 /* HousesViewModel.swift in Sources */,
 				6110D7D62789D5E500FBCA78 /* Houses.swift in Sources */,
@@ -837,7 +845,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -866,7 +874,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
